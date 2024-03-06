@@ -6,7 +6,7 @@ const {mongoose} = require('mongoose');
 // Database Connection
 mongoose.connect(process.env.MONG_URL)
 .then(() => console.log('Database Connected'))
-.catch(() => console.log('Database Connection Failed', err))
+.catch((err) => console.log('Database Connection Failed', err))
 
 const app = express();
 
