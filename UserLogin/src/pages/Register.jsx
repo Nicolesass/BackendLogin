@@ -1,5 +1,5 @@
 import { useState } from "react"
-import axios from 'axios' 
+ import axios from 'axios'  
 
 export default function Register() {
   const [data, setData] = useState({
@@ -7,7 +7,6 @@ export default function Register() {
     email: '',
     password: '',
   })
-
   const registerUser = (e) => {
     e.preventDefault()
     axios.get('/')
@@ -24,7 +23,7 @@ export default function Register() {
         <label>Password</label>
         <input type="password" placeholder='enter password...' value={data.password} 
           onChange={(e) => setData({...data, password: e.target.value})}/>
-        <button type="submit">Submit</button>
+        <button type="submit">Sign up</button>
         
       </form>
     </div>
